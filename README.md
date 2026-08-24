@@ -1,83 +1,210 @@
-# Brand Intelligence Engine
+---
+```markdown
+# 🧠 Brand Intelligence Engine
 
-> Multi-source brand reputation scraper with NLP sentiment analysis.
+> **Multi-source brand reputation scraper with NLP sentiment analysis.**
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Production-brightgreen.svg)]()
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow.svg)](https://powerbi.microsoft.com/)
+[![NLP](https://img.shields.io/badge/NLP-VADER-purple.svg)]()
+
+---
+
+## 📖 Table of Contents
+
+- [Overview](#-overview)
+- [Features](#-features)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Dashboard Preview](#-dashboard-preview)
+- [Key Insights](#-key-insights)
+- [Technologies Used](#-technologies-used)
+- [License](#-license)
+- [Connect with Me](#-connect-with-me)
+
+---
 
 ## 🚀 Overview
 
-This project scrapes, cleans, and analyzes brand mentions across 4 platforms:
+This project is a complete **brand intelligence pipeline** that automatically scrapes, cleans, and analyzes brand mentions across **4 major platforms**:
 
-- **Trustpilot** – Customer reviews and ratings
-- **Google Play** – App store reviews
-- **Google News** – News headlines and articles
-- **Telegram** – Public channel messages
+| Platform | Data Type | Purpose |
+|:---|:---|:---|
+| **Trustpilot** | Customer reviews & ratings | Understand customer satisfaction |
+| **Google Play** | App store reviews | Monitor app reputation |
+| **Google News** | News headlines & articles | Track media sentiment |
+| **Telegram** | Public channel messages | Gauge community sentiment |
 
-The pipeline applies **NLP sentiment analysis (VADER)** to classify each mention as positive, neutral, or negative.
+The pipeline applies **Natural Language Processing (VADER sentiment analysis)** to automatically classify each mention as **positive, neutral, or negative**, providing a comprehensive view of brand reputation in real-time.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|:---|:---|
+| 🤖 **Automated Scraping** | Selenium and API-based scrapers for each platform |
+| 🧹 **Data Cleaning** | Unifies disparate data sources into a single schema |
+| 🧠 **NLP Sentiment Analysis** | VADER lexicon-based sentiment scoring |
+| 📈 **Interactive Dashboard** | Power BI dashboard for visualization |
+| 📁 **CSV Export** | Clean, structured data ready for analysis |
+| 🔄 **Scalable** | Modular design allows easy addition of new sources |
+
+---
 
 ## 📁 Project Structure
 
+```
 brand-intelligence-engine/
-├── src/ # All scraper source code
-│ ├── trustpilot.py
-│ ├── googleplay.py
-│ ├── googlenews.py
-│ ├── telegram.py
-│ ├── combine.py
-│ └── combine_sentiment.py
+│
+├── src/                              # All scraper source code
+│   ├── trustpilot.py                 # Trustpilot review scraper
+│   ├── googleplay.py                 # Google Play review scraper
+│   ├── googlenews.py                 # Google News headline scraper
+│   ├── telegram.py                   # Telegram channel scraper
+│   ├── combine.py                    # Merge all sources into one CSV
+│   └── combine_sentiment.py          # Add NLP sentiment analysis
+│
 ├── data/
-│ ├── raw/ # Raw scraped data (CSV)
-│ └── processed/ # Cleaned & sentiment-enriched data
-├── output/ # Power BI dashboard & screenshots
-├── screenshot/ # Dashboard preview images
-├── requirements.txt # Python dependencies
-└── README.md # This file
-text
+│   ├── raw/                          # Raw scraped data (CSV)
+│   │   ├── google_news_*.csv
+│   │   ├── googleplay_reviews.csv
+│   │   ├── trustpilot_reviews.csv
+│   │   └── telegram_messages.csv
+│   └── processed/                    # Cleaned & sentiment-enriched data
+│       ├── all_combined.csv
+│       └── all_combined_with_sentiment.csv
+│
+├── output/                           # Power BI dashboard & screenshots
+│   ├── output.pbix
+│   └── *.PNG
+│
+├── screenshot/                       # Dashboard preview images
+│   └── dashboard_preview.PNG
+│
+├── requirements.txt                  # Python dependencies
+├── .gitignore                        # Git ignore rules
+└── README.md                         # This file
+```
 
+---
 
 ## 🔧 Installation
 
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/brand-intelligence-engine.git
+cd brand-intelligence-engine
+```
+
+### 2. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
+```
 
-🏃 Usage
+### 3. Set Up Credentials
 
-Run each scraper individually:
-bash
+For Telegram scraping, create a `.env` file in the project root:
 
-python src/trustpilot.py
-python src/googleplay.py
-python src/googlenews.py
-python src/telegram.py
+```
+API_ID=your_telegram_api_id
+API_HASH=your_telegram_api_hash
+PHONE_NUMBER=your_phone_number
+```
 
-Combine all data:
-bash
+> **Note:** You can get your Telegram API credentials from [my.telegram.org/apps](https://my.telegram.org/apps).
 
+---
+
+## 🏃 Usage
+
+### Run Individual Scrapers
+
+```bash
+python src/trustpilot.py      # Scrape Trustpilot reviews
+python src/googleplay.py      # Scrape Google Play reviews
+python src/googlenews.py      # Scrape Google News headlines
+python src/telegram.py        # Scrape Telegram channel messages
+```
+
+### Combine All Data
+
+```bash
 python src/combine.py
+```
 
-Add sentiment analysis:
-bash
+### Add Sentiment Analysis (NLP)
 
+```bash
 python src/combine_sentiment.py
+```
 
-📊 Technologies Used
+### Open the Dashboard
 
-    Python 3.10+
+Open `output/output.pbix` in **Power BI Desktop** to explore the interactive dashboard.
 
-    Selenium – Web scraping
+---
 
-    Pandas – Data manipulation
+## 📊 Dashboard Preview
 
-    google-play-scraper – Google Play API
+![Brand Intelligence Dashboard](screenshot/dashboard_preview.PNG)
 
-    Telethon – Telegram API
+> *Interactive Power BI dashboard showing sentiment distribution, source breakdown, trends over time, and keyword analysis.*
 
-    VADER Sentiment – NLP sentiment analysis
+---
 
-    Power BI – Data visualization
+## 📈 Key Insights
 
+| Insight | Finding |
+|:---|:---|
+| 📊 **Total Mentions** | 740 reviews/news/chat messages analyzed |
+| 📈 **Positive Sentiment** | 58.6% of all mentions are positive |
+| 📉 **Negative Sentiment** | 15.1% of all mentions are negative |
+| 🟢 **Safest Platform** | Telegram shows the highest positive sentiment |
+| 🔴 **Risk Platform** | Trustpilot shows the highest negative sentiment |
+| 🔍 **Main Complaint** | "Withdrawal delays" and "frozen funds" are the top negative topics |
 
-conect with me:
-linkedin= https://www.linkedin.com/in/seyedeh-fatemeh-hosseininasab-7320bb322/
-and my GITHUB
+---
 
-👨‍💻 Author
-SEYEDEH FATEMEH HOSSEININASAB with ❤
+## 🛠️ Technologies Used
+
+| Category | Tools |
+|:---|:---|
+| **Programming Language** | Python 3.10+ |
+| **Web Scraping** | Selenium, google-play-scraper, Telethon, feedparser |
+| **Data Processing** | Pandas, NumPy |
+| **Natural Language Processing** | VADER Sentiment (lexicon-based) |
+| **Visualization** | Power BI Desktop |
+| **Version Control** | Git & GitHub |
+| **Environment** | Python-dotenv |
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+🤝 Connect with Me
+
+I'm a passionate Data Engineer & Scraping Specialist focused on building end-to-end data pipelines. If you're interested in collaborating, let's connect!
+
+https://img.shields.io/badge/LinkedIn-Seyedeh%2520Fatemeh%2520Hosseininasab-blue?style=for-the-badge&logo=linkedin
+
+📝 Author
+
+Seyedeh Fatemeh Hosseininasab
+Data Engineer | Web Scraping Specialist | NLP Enthusiast
+
+Built with ❤️ as a complete brand intelligence freelancing project.
+⭐ Show Your Support
+
+If you found this project helpful, please give it a ⭐ on GitHub!
+
+```
+
+You're ready. 🚀
