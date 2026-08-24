@@ -1,7 +1,4 @@
 
----
-
-```markdown
 # 🧠 Brand Intelligence Engine
 
 > **Multi-source brand reputation scraper with NLP sentiment analysis.**
