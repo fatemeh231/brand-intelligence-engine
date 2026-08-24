@@ -14,9 +14,9 @@ import os
 import asyncio
 
 # ---------- YOUR CREDENTIALS ----------
-API_ID = 32796202
-API_HASH = '5fbb3b21125f96f9fb527af78c13eed7'  
-PHONE_NUMBER = "+989120721126"
+API_ID = #change with yours
+API_HASH = ''->#change with yours  
+PHONE_NUMBER = ""#change with yours 
 
 # Output directory (reuse your existing one)
 OUTPUT_DIR = r"C:\Users\Administrator\Desktop\new"
