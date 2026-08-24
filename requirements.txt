@@ -1,0 +1,7 @@
+selenium==4.15.2
+pandas==2.1.4
+google-play-scraper==1.2.7
+telethon==1.34.0
+vaderSentiment==3.3.2
+python-dotenv==1.0.0
+feedparser==6.0.11
