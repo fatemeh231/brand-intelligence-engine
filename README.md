@@ -1,4 +1,6 @@
+
 ---
+
 ```markdown
 # 🧠 Brand Intelligence Engine
 
@@ -97,7 +99,7 @@ brand-intelligence-engine/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/brand-intelligence-engine.git
+git clone https://github.com/fatemeh231/brand-intelligence-engine.git
 cd brand-intelligence-engine
 ```
 
@@ -189,22 +191,63 @@ Open `output/output.pbix` in **Power BI Desktop** to explore the interactive das
 
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
-🤝 Connect with Me
+```
+MIT License
 
-I'm a passionate Data Engineer & Scraping Specialist focused on building end-to-end data pipelines. If you're interested in collaborating, let's connect!
+Copyright (c) 2026 Seyedeh Fatemeh Hosseininasab
 
-https://img.shields.io/badge/LinkedIn-Seyedeh%2520Fatemeh%2520Hosseininasab-blue?style=for-the-badge&logo=linkedin
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-📝 Author
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Seyedeh Fatemeh Hosseininasab
-Data Engineer | Web Scraping Specialist | NLP Enthusiast
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 🤝 Connect with Me
+
+I'm a passionate **Data Engineer & Scraping Specialist** focused on building end-to-end data pipelines. If you're interested in collaborating or hiring, let's connect!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Seyedeh%20Fatemeh%20Hosseininasab-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/seyedeh-fatemeh-hosseininasab-7320bb322/)
+[![GitHub](https://img.shields.io/badge/GitHub-fatemeh231-black?style=for-the-badge&logo=github)](https://github.com/fatemeh231)
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:seyedehfatemehhosseininasab2@gmail.com)
+
+---
+
+## 📝 Author
+
+**Seyedeh Fatemeh Hosseininasab**  
+*Data Engineer | Web Scraping Specialist | NLP Enthusiast*
 
 Built with ❤️ as a complete brand intelligence freelancing project.
-⭐ Show Your Support
+
+---
+
+### ⭐ Show Your Support
 
 If you found this project helpful, please give it a ⭐ on GitHub!
 
+---
+
+## 🔄 Changelog
+
+| Version | Date | Changes |
+|:---|:---|:---|
+| 1.0.0 | August 2026 | Initial release – Complete brand intelligence pipeline |
 ```
 
-You're ready. 🚀
+---
+
